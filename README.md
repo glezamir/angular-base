@@ -1,4 +1,3 @@
-# angular-base
-training
-
-############## 
+# angular-base  ###########
+Advanced project structure.
+###########################
