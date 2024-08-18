@@ -1,0 +1,62 @@
+<div style="height: 100vh;">
+
+  <mat-sidenav-container fxFlexFill><!-- fxFlex debe ser sustituido por SCSS -->
+
+    <!-- Menu lateral -->
+    <mat-sidenav  mode="over" opened #sidenav (openedStart)="sidenavOpening()" (closedStart)="sidenavClosing()">
+      <div class="aaa-div-nav-list-wrapper">
+      <mat-nav-list>
+        <!-- Lista Menu lateral -->
+        Lista Menu lateral
+        <!-- <app-matside (matsideEvtToggle)="sidenav.toggle()"></app-matside> -->
+      </mat-nav-list>
+    </div>
+    </mat-sidenav>
+    <!-- Menu lateral -->
+
+    <!-- Contenido de la app. Sección Principal (Contiene: -Encabezado -Contenido -Footer) -->
+    <mat-sidenav-content fxFlexFill>
+
+      <!-- Menu horizontal -->
+      <mat-toolbar color="primary">
+        <mat-toolbar-row>
+          <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+            <mat-icon>{{menu_icon}}</mat-icon>
+          </button>
+          <span>Responsive Navigation</span>
+          <span class="header-spacer"></span>
+          <div class="header-menu" fxShow="true" fxHide.lt-md="true">
+            <!-- Menu encabezado -->
+            <!-- <app-matheader></app-matheader> -->
+            <!-- Menu encabezado -->
+
+          </div>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <!-- Menu horizontal -->
+
+      <!-- --------------------------------------------------------------- -->
+      <!-- Contenido de la App ------------------------------------------- -->
+
+      <div class="app-content">
+contenido
+
+        <router-outlet></router-outlet>
+
+      </div>
+
+      <!-- Contenido de la App ------------------------------------------- -->
+      <!-- --------------------------------------------------------------- -->
+
+      <!-- Pie de la pagina -->
+      <br> <!-- Espacio sobre el footer TEMPORAL -->
+      Pie de página
+      <!-- Pie de la pagina -->
+
+    </mat-sidenav-content>
+    <!-- Contenido de la app. Sección Principal (Contiene: -Encabezado -Contenido -Footer) -->
+
+  </mat-sidenav-container>
+</div>
+
+

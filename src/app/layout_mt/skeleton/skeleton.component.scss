@@ -1,0 +1,34 @@
+.header-menu {
+  align-items: center;
+}
+
+.header-spacer {
+  flex: 1 1 auto;
+}
+
+.app-content{
+  min-height: /* 100px !important; */ calc(100vh - 80px - 60px);
+  padding: 15px;
+}
+
+.mat-list-base {
+  padding-top: 0px;
+}
+
+.mat-drawer {
+   padding-right: 0px;
+
+}
+
+.mat-drawer-inner-container {
+   //width: 60%;
+
+   padding-right: 20px !important;
+
+}
+
+.aaa-div-nav-list-wrapper {
+
+  padding-right: 20px !important;
+
+}

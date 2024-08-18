@@ -1,0 +1,32 @@
+<h1 mat-dialog-title>Add product form</h1>
+<div mat-dialog-content>
+    <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Product Description</mat-label>
+          <input matInput placeholder="Product name and specific features" required>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </p>
+    <!-- <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Product Category</mat-label>
+          <mat-select [(ngModel)]=""></mat-select>
+          <mat-hint>Select a Category</mat-hint>
+        </mat-form-field>
+    </p> -->
+
+    <!-- <h3>Pasatiempos</h3>
+    <button mat-raised-button type="button" (click)="agregarPasatiempo()">Agregar pasatiempo</button>
+    <div formArrayName="pasatiempos">
+      <div *ngFor="let pasatiempo of pasatiempos.controls; let i = index">
+        <mat-form-field>
+          <mat-label>Pasatiempo {{ i + 1 }}</mat-label>
+          <input matInput [formControlName]="i">
+          <button mat-icon-button type="button" (click)="eliminarPasatiempo(i)">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+    </div> -->
+
+</div>

@@ -1,0 +1,50 @@
+<div style="height: 100vh;">
+  <mat-sidenav-container fxFlexFill>
+    <!-- Menu lateral -->
+    <mat-sidenav #sidenav (openedStart)="sidenavOpening()" (closedStart)="sidenavClosing()">
+      <div class="aaa-div-nav-list-wrapper">
+      <mat-nav-list>
+        <app-matside (matsideEvtToggle)="sidenav.toggle()"></app-matside>
+      </mat-nav-list>
+    </div>
+    </mat-sidenav>
+    <!-- Menu lateral -->
+    <!-- Contenido de la app -->
+    <mat-sidenav-content fxFlexFill>
+      <!-- Menu horizontal -->
+      <mat-toolbar color="primary">
+        <mat-toolbar-row>
+          <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+            <mat-icon>{{menu_icon}}</mat-icon>
+          </button>
+          <span>Responsive Navigation</span>
+          <span class="header-spacer"></span>
+          <div class="header-menu" fxShow="true" fxHide.lt-md="true">
+            <!-- Menu encabezado -->
+            <app-matheader></app-matheader>
+            <!-- Menu encabezado -->
+            
+            
+            <div>
+              <button routerLink = "/panel/users">Lista Usuarios</button>
+              <button routerLink = "/panel/user/1">Detalle Usuario</button>
+            </div>
+          
+
+
+          </div>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <!-- Menu horizontal -->
+      <div class="app-content">
+        <router-outlet></router-outlet>
+      </div>
+      <!-- Pie de la pagina -->
+      <br> <!-- Espacio sobre el footer TEMPORAL -->
+      <app-footer></app-footer>
+      <!-- Pie de la pagina -->
+    </mat-sidenav-content>
+    <!-- Contenido de la app -->
+
+  </mat-sidenav-container>
+</div>

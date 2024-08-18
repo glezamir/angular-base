@@ -1,0 +1,80 @@
+<!-- Menu horizontal -->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <!-- <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+      <mat-icon>{{menu_icon}}</mat-icon>
+    </button> -->
+    <span>Responsive Navigation</span>
+    <span class="header-spacer"></span>
+    <div class="header-menu" fxShow="true" fxHide.lt-md="true">
+      <!-- Menu encabezado -->
+      <!-- <app-matheader></app-matheader> -->
+      <!-- Menu encabezado -->
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<!-- Menu horizontal -->
+
+
+<div class="div-contenedor-login login-form" >
+    <form [formGroup]="loginForm" (ngSubmit)="authenticate()">
+      <mat-card>
+          <mat-card-content>
+          <!-- <form #loginForm="ngForm" (ngSubmit)="onSubmit()"> -->
+              <h2>Autenticarse</h2>
+              <mat-form-field style="width: 100%;">
+              <input matInput placeholder="Nombre" formControlName="nombre" [errorStateMatcher]="matcher" name="username" required>
+              <mat-error *ngIf="(formLoginControls['nombre'].dirty || formLoginControls['nombre'].touched) && formLoginControls['nombre'].errors">
+                  {{getNameControlError().err_msg}}
+              </mat-error>
+              </mat-form-field>
+              <mat-form-field style="width: 100%;">
+              <input matInput type="password" placeholder="Contraseña" formControlName="password" name="password" required matInput [type]="psw_hide ? 'password' : 'text'">
+              <button mat-icon-button matSuffix (click)="psw_hide = !psw_hide" [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="psw_hide">
+                  <mat-icon>{{psw_hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-error *ngIf="(formLoginControls['password'].dirty || formLoginControls['password'].touched) && formLoginControls['password'].errors">
+                  {{getPasswordControlError().err_msg}}
+              </mat-error>
+              </mat-form-field>
+
+              <button class="button-accept-login" mat-raised-button type="submit" [disabled]="!isValidForm()">Aceptar</button>
+
+          <!-- </form> -->
+          </mat-card-content>
+      </mat-card>
+    </form>
+</div>
+
+
+<!--<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<div style="border-style: solid; border-color: black; margin-left: auto; margin-right: auto; width: 250px; margin-top: auto; margin-bottom: auto;">
+<h2>Login</h2>
+<!- - <form [formGroup]="loginForm" (ngSubmit)="aceptarLogin()"> - ->
+<form>
+    <div class="form-group">
+        <div class="example-container">
+            <mat-form-field appearance="fill" style="width: 100%;">
+                <mat-label>Nombre</mat-label>
+                <input name="nombre" id="nombre" matInput formControlName="nombre" placeholder="" required>
+                <mat-error>Error en nombre</mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>Contraseña</mat-label>
+        <input matInput [type]="psw_hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="psw_hide = !psw_hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="psw_hide">
+            <mat-icon>{{psw_hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <br>
+    <button mat-stroked-button [disabled]="false">Aceptar</button>
+</form>
+</div> -->

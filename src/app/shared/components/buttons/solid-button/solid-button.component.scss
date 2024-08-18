@@ -1,0 +1,19 @@
+$types: 'primary' rgb(6,6,184), 'danger' red, 'success' rgb(19, 201,19);
+.button {
+    border: none;
+    color: #fff;
+    height: 40px;
+    min-width: 70px;
+    margin: 2px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background: rgb(6, 6, 184);
+    &:hover {
+        opacity: 0.75;
+    }
+    @each $type, $color in $types {
+        &-#{$type} {
+            background: $color;
+        }
+    }
+}

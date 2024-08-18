@@ -1,0 +1,22 @@
+mat-card {
+    max-width: 350px;
+    margin: 2em auto;
+    text-align: center;
+  }
+
+mat-form-field {
+    margin-bottom: 5px;
+}
+
+.div-contenedor-login {
+    height: 100%;
+    /*Importante*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(19, 32, 32); /* Fondo del login */
+}
+
+.button-accept-login {
+    margin-top: 5px;
+}

@@ -1,0 +1,86 @@
+<app-title-h1 [text] = "'Nuevo usuario'" #mainTitle></app-title-h1>
+<app-row>
+    <ng-container *ngFor = "let usr of serviceTable.getCurrentItems">
+        <app-col [sizes]="{ xs: 12, md: 6, xl: 4, xxl: 3, xxxl: 2}" [classes]="'test'">
+            <app-card-user [data] = "usr"></app-card-user>
+        </app-col>
+    </ng-container>    
+</app-row>
+
+
+
+
+
+
+
+
+
+<!-- <div>
+    <app-full-table #t [service] = "serviceTable">
+        <tr recordsHead>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Posición</th>
+            <th>Descripción</th>
+        </tr>
+        <tr recordsBody *ngFor="let user of serviceTable.getCurrentItems">
+            <td style = "text-decoration: underline;" [routerLink] = "'/panel/user/' + user.id">{{ user.name }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.work }}</td>
+            <td>{{ user.description }}</td>
+        </tr>
+    </app-full-table>
+</div>
+<app-solid-button 
+    [title] = "'Guardar'"
+    [type] = "$btnTypes.SUCCESS"
+    (action_event) = "
+        t.tableService.getData()
+    "
+    #mainButton
+></app-solid-button> -->
+
+
+
+
+
+
+
+<!-- <app-solid-button 
+    [title] = "'Boton accedido con @ViewChild'"
+    [type] = "$btnTypes.SUCCESS"
+    (action_event) = "actions($event)"
+    #mainButton
+    ></app-solid-button> -->
+
+
+<!-- <div #container>
+    Es un container
+</div> -->
+
+<!-- <app-solid-button 
+    [title] = "'Editar'"
+    [type] = "$btnTypes.PRIMARY"
+    (action_event) = "actions($event)"
+    ></app-solid-button>
+<app-solid-button 
+    [title] = "'Eliminar'"
+    [type] = "$btnTypes.DANGER"
+    (action_event) = "actions($event)"
+    ></app-solid-button>
+<app-solid-button 
+    [title] = "'Actualizar'"
+    [type] = "$btnTypes.SUCCESS"
+    [url] = "'/panel/user/1'"
+    (action_event) = "actions($event)"
+    ></app-solid-button> -->
+<br>
+<br>
+<!-- <div class="row">
+    <div class="col-12">
+        <app-title-h1 text = "Lista de usuarios"></app-title-h1>
+    </div>
+    <app-card-user [data] = "user" *ngFor="let user of users;" class="col-12 col-md-6 col-lg-4 col-xl-3"></app-card-user>
+    
+</div> -->
+
